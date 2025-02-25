@@ -15,4 +15,4 @@ response=$(curl -s -u "$GITHUB_USER:$GITHUB_TOKEN" -H "Accept: application/vnd.g
 
 # Parse and display usernames
 echo "Users with access:"
-echo "$response" | jq -r '.[].login'   # Requires jq to parse JSON
+echo "$response" # | jq -r '.[].login'   # Requires jq to parse JSON
