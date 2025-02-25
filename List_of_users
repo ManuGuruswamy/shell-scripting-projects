@@ -1,0 +1,18 @@
+#!/bin/bash
+
+# GitHub credentials
+GITHUB_USER="your_github_username"
+GITHUB_TOKEN="your_personal_access_token"  # Use token if accessing private repos
+REPO_OWNER="repo_owner_username_or_org"
+REPO_NAME="repository_name"
+
+# GitHub API URL
+API_URL="https://api.github.com/repos/$REPO_OWNER/$REPO_NAME/collaborators"
+
+# Fetch the list of users with access
+echo "Fetching users with access to $REPO_OWNER/$REPO_NAME..."
+response=$(curl -s -u "$GITHUB_USER:$GITHUB_TOKEN" -H "Accept: application/vnd.github.v3+json" "$API_URL")
+
+# Parse and display usernames
+echo "Users with access:"
+echo "$response" | jq -r '.[].login'   # Requires jq to parse JSON
