@@ -1,10 +1,10 @@
 #!/bin/bash
 
 # GitHub credentials
-GITHUB_USER="your_github_username"
-GITHUB_TOKEN="your_personal_access_token"  # Use token if accessing private repos
-REPO_OWNER="repo_owner_username_or_org"
-REPO_NAME="repository_name"
+GITHUB_USER="ManuGuruswamy"
+GITHUB_TOKEN="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"  # Use token if accessing private repos
+REPO_OWNER="Manu-DevOps-Learnings"
+REPO_NAME="DevOps"
 
 # GitHub API URL
 API_URL="https://api.github.com/repos/$REPO_OWNER/$REPO_NAME/collaborators"
